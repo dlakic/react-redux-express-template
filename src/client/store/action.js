@@ -4,3 +4,5 @@ export function changeColor(color) {
     color,
   };
 }
+
+export default changeColor;
