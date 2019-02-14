@@ -2,9 +2,9 @@
  * dev server
  */
 const webpack = require('webpack');
-const wpConfig = require('./../../../webpack.config.dev');
 const devMiddleware = require('webpack-dev-middleware');
-const hotMiddleware =  require('webpack-hot-middleware');
+const hotMiddleware = require('webpack-hot-middleware');
+const wpConfig = require('./../../../webpack.config.dev');
 const logger = require('../logger');
 
 

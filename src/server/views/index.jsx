@@ -13,7 +13,7 @@ const Index = () => (
       <link rel="stylesheet" href="/css/bootstrap.css" />
     </head>
     <body>
-      <div id="app" />
+      <div id="root" />
       <script src="./js/bundle.js" />
     </body>
   </html>

@@ -18,10 +18,9 @@ app.set('views', './src/server/views');
 app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
 
-if(process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'development') {
   devServer(app);
 }
-
 
 app.use(express.static(path.join(__dirname, 'public')));
 
