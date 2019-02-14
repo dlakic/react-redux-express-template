@@ -5,7 +5,6 @@ const logger = require('./src/server/logger');
 const routes = require('./src/server/routes');
 const devServer = require('./src/server/middleware/dev-server');
 
-
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 const app = express();
