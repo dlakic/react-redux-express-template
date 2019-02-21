@@ -9,15 +9,13 @@ const logger = require('../logger');
 
 
 module.exports = (app) => {
-  if (process.env.NODE_ENV === 'development') {
-    logger.debug('Starting dev server');
-    const compiler = webpack(wpConfig);
+  logger.debug('Starting dev server');
+  const compiler = webpack(wpConfig);
 
-    app.use(devMiddleware(compiler, {
-      noInfo: true,
-      publicPath: wpConfig.output.publicPath,
-    }));
+  app.use(devMiddleware(compiler, {
+    noInfo: true,
+    publicPath: wpConfig.output.publicPath,
+  }));
 
-    app.use(hotMiddleware(compiler));
-  }
+  app.use(hotMiddleware(compiler));
 };
