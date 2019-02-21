@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import changeColor from '../store/action';
+import { changeColor } from '../store/action';
 import ReduxDevTools from './redux-dev-tools';
 
 const App = ({ color, dispatch }, { store }) => {
