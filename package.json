@@ -13,6 +13,7 @@
     "clean": "./node_modules/.bin/rimraf public/js"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.4.3",
     "express": "~4.16.0",
     "express-react-views": "^0.11.0",
     "http-errors": "~1.6.2",

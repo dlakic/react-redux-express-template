@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { hot } from 'react-hot-loader';
 import { changeColor } from '../store/action';
 import ReduxDevTools from './redux-dev-tools';
 
@@ -49,4 +50,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default hot(module)(connect(mapStateToProps, mapDispatchToProps)(App));
