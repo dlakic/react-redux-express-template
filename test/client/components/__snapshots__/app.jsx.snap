@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rendering the entire app 1`] = `
+<div>
+  <h1>
+    Welcome to the react-redux test app!
+  </h1>
+  <p
+    className="green"
+  >
+    It works!
+  </p>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    green
+  </button>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    yellow
+  </button>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    red
+  </button>
+</div>
+`;

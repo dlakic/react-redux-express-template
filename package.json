@@ -8,9 +8,27 @@
     "devstart": "nodemon",
     "debug": "nodemon --exec node --inspect=3001 --trace-warnings ./bin/www",
     "lint": "./node_modules/.bin/eslint .",
+    "test": "jest",
     "build:win": "./node_modules/.bin/webpack --config webpack.config.prod.js --bail",
     "build": "npm run clean && NODE_ENV=production ./node_modules/.bin/webpack --config webpack.config.prod.js --bail",
     "clean": "./node_modules/.bin/rimraf public/js"
+  },
+  "jest": {
+    "testRegex": "/test/(?!.eslintrc.js$)(?!testutils.jsx$).*.jsx?$",
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!**/node_modules/**",
+      "!**/public/**",
+      "!**/coverage/**"
+    ],
+    "globals": {
+      "window": {}
+    },
+    "coverageReporters": [
+      "text-summary",
+      "html",
+      "text"
+    ]
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.3",
@@ -37,7 +55,9 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.0",
+    "jest": "^24.8.0",
     "node-sass": "^4.11.0",
+    "react-test-renderer": "^16.8.6",
     "redux-devtools": "^3.5.0",
     "redux-devtools-dock-monitor": "^1.1.3",
     "redux-devtools-log-monitor": "^1.4.0",

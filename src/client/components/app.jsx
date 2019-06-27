@@ -5,7 +5,7 @@ import { hot } from 'react-hot-loader';
 import { changeColor } from '../store/action';
 import ReduxDevTools from './redux-dev-tools';
 
-const App = ({ color, dispatch }, { store }) => {
+export const App = ({ color, dispatch }, { store }) => {
   function handleClick(chosenColor) {
     dispatch(changeColor(chosenColor));
   }
