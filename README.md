@@ -33,4 +33,5 @@ The admin interface is built using node.js containing a small API-proxy server a
 - [Thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html)
 - [How redux works, how to use redux](https://egghead.io/lessons/javascript-redux-the-single-immutable-state-tree?series=getting-started-with-redux) **note:** really worth it!
 - [Express.js Guide](http://expressjs.com/en/guide/routing.html)
+- [Bluebird - Request-Promise](https://github.com/request/request-promise)
 
