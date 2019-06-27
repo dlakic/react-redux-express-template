@@ -17,3 +17,33 @@ test('Rendering the entire app', () => {
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
+
+test('Rendering the yellow colored app', () => {
+  const props = {
+    color: 'yellow',
+    dispatch: () => {},
+  };
+
+  const component = renderer.create(
+    <Provider>
+      <App {...props} />
+    </Provider>,
+  );
+  const tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+test('Rendering the red colored app', () => {
+  const props = {
+    color: 'red',
+    dispatch: () => {},
+  };
+
+  const component = renderer.create(
+    <Provider>
+      <App {...props} />
+    </Provider>,
+  );
+  const tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
+});

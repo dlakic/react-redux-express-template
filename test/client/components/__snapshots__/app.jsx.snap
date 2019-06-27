@@ -8,7 +8,69 @@ exports[`Rendering the entire app 1`] = `
   <p
     className="green"
   >
-    It works!
+    It works! Current color: green
+  </p>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    green
+  </button>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    yellow
+  </button>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    red
+  </button>
+</div>
+`;
+
+exports[`Rendering the red colored app 1`] = `
+<div>
+  <h1>
+    Welcome to the react-redux test app!
+  </h1>
+  <p
+    className="red"
+  >
+    It works! Current color: red
+  </p>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    green
+  </button>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    yellow
+  </button>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    red
+  </button>
+</div>
+`;
+
+exports[`Rendering the yellow colored app 1`] = `
+<div>
+  <h1>
+    Welcome to the react-redux test app!
+  </h1>
+  <p
+    className="yellow"
+  >
+    It works! Current color: yellow
   </p>
   <button
     onClick={[Function]}

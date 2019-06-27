@@ -18,7 +18,9 @@ export const App = ({ color, dispatch }, { store }) => {
   return (
     <div>
       <h1>Welcome to the react-redux test app!</h1>
-      <p className={color}>It works!</p>
+      <p className={color}>
+        {`It works! Current color: ${color}`}
+      </p>
       <button type="button" onClick={() => handleClick('green')}>green</button>
       <button type="button" onClick={() => handleClick('yellow')}>yellow</button>
       <button type="button" onClick={() => handleClick('red')}>red</button>
