@@ -1,0 +1,3 @@
+export const USERS_TOGGLE_LOADING = 'USERS_TOGGLE_LOADING';
+export const USERS_SET = 'USERS_SET';
+export const CHANGE_COLOR = 'CHANGE_COLOR';

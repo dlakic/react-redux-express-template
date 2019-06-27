@@ -1,0 +1,17 @@
+.users-container {
+  background-color: rgba(blue, 0.2);
+  min-height: 80px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.user-container {
+  display: flex;
+  justify-content: center;
+}
+
+.user-container p {
+  margin: 5px;
+}

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { hot } from 'react-hot-loader';
 import { changeColor } from '../store/action';
 import ReduxDevTools from './redux-dev-tools';
+import Users from './users';
 
 export const App = ({ color, dispatch }, { store }) => {
   function handleClick(chosenColor) {
@@ -24,6 +25,7 @@ export const App = ({ color, dispatch }, { store }) => {
       <button type="button" onClick={() => handleClick('green')}>green</button>
       <button type="button" onClick={() => handleClick('yellow')}>yellow</button>
       <button type="button" onClick={() => handleClick('red')}>red</button>
+      <Users/>
       {DevTools}
     </div>
   );
