@@ -1,8 +1,8 @@
-#React-Redux Express Template
+# React-Redux Express Template
 
 A minimal template to work with as a starting point for React-Redux web applications.
 
-##Components
+## Components
 The template is split into a server and client component. 
 The server consists of an [Express.js](https://expressjs.com) server which serves the routes for an API proxy
 and bundles the built React-Redux frontend. The client component consists of said frontend. 
