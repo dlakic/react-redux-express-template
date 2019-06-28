@@ -26,8 +26,8 @@ export function fetchUsers() {
     toggleLoading();
     return request('get', '/api/users')
       .then(response => dispatch(setUsers(response.body)))
-      .catch((err) => {
-
+      .catch(() => {
+        // noop
       })
       .finally(() => {
         dispatch(toggleLoading());

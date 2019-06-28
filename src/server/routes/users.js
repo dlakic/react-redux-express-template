@@ -23,8 +23,6 @@ exports.get = (req, res) => {
 
 exports.post = (req, res) => {
   winston.profile('users-api');
-
-  console.log(req.body);
   usersApi.post(req.body)
     .then(() => {
       res.set('Cache-Control', 'no-cache');

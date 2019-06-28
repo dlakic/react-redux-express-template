@@ -1,7 +1,6 @@
 /**
- * API users
- * Example api-service, which is not complete example.
- * Only used for demonstration purpose.
+ * Mock API users service
+ * Example api service, only used for demonstration purposes.
  * --> see e.g. admin-tool for complete api-service class.
  */
 const mockUsers = [
@@ -21,10 +20,14 @@ const mockUsers = [
  * Executes a GET request on users
  * Here the DB connection should be created
  */
-function get(api, path, qs = {}) {
+function get() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(mockUsers);
+      if (mockUsers.length > 0) {
+        resolve(mockUsers);
+      } else {
+        reject(new Error('No Users found'));
+      }
     },
     2000);
   });
@@ -32,8 +35,6 @@ function get(api, path, qs = {}) {
 
 /**
  * Mock function to put data into backend
- * @param api
- * @param path
  * @param user
  */
 function post(user) {
@@ -41,7 +42,12 @@ function post(user) {
     const newUser = user;
     newUser.id = mockUsers.length;
     mockUsers.push(user);
-    resolve(mockUsers);
+    // This check is only for illustration purposes
+    if (Array.isArray(mockUsers)) {
+      resolve(mockUsers);
+    } else {
+      reject(new Error('User could not be added'));
+    }
   });
 }
 
