@@ -28,6 +28,13 @@ exports[`Rendering the entire app 1`] = `
   >
     red
   </button>
+  <div
+    className="users-container"
+  >
+    <h2>
+       Loading ... 
+    </h2>
+  </div>
 </div>
 `;
 
@@ -59,6 +66,13 @@ exports[`Rendering the red colored app 1`] = `
   >
     red
   </button>
+  <div
+    className="users-container"
+  >
+    <h2>
+       Loading ... 
+    </h2>
+  </div>
 </div>
 `;
 
@@ -90,5 +104,12 @@ exports[`Rendering the yellow colored app 1`] = `
   >
     red
   </button>
+  <div
+    className="users-container"
+  >
+    <h2>
+       Loading ... 
+    </h2>
+  </div>
 </div>
 `;

@@ -22,16 +22,29 @@ export function setUsers(users) {
 }
 
 export function fetchUsers() {
-  return (dispatch) => {
-    toggleLoading();
-    return request('get', '/api/users')
-      .then(response => dispatch(setUsers(response.body)))
-      .catch((err) => {
+  return async (dispatch) => {
+    try {
+      dispatch(toggleLoading());
+      const response = await request('get', '/api/users');
+      dispatch(setUsers(response.body));
+      dispatch(toggleLoading());
+    } catch (e) {
+      // TODO: Proper error handling
+    }
+  };
+}
 
-      })
-      .finally(() => {
-        dispatch(toggleLoading());
-      });
+
+export function createUser(user) {
+  return async (dispatch) => {
+    try {
+      dispatch(toggleLoading());
+      await request('post', '/api/users').send(user);
+      dispatch(fetchUsers());
+      dispatch(toggleLoading());
+    } catch (e) {
+      // TODO: Proper error handling
+    }
   };
 }
 

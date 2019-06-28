@@ -1,25 +1,48 @@
-## Introduction
-A minimal react-redux template to work with as an example
- and as a starting point for React-Redux Webapplications.
+#React-Redux Express Template
+
+A minimal template to work with as a starting point for React-Redux web applications.
+
+##Components
+The template is split into a server and client component. 
+The server consists of an [Express.js](https://expressjs.com) server which serves the routes for an API proxy
+and bundles the built React-Redux frontend. The client component consists of said frontend. 
 
 The following features and libraries are integrated and shown as an example:
 
-- **Redux**: Global state handling
-- 
-The admin interface is built using node.js containing a small API-proxy server and a client-side only application using react & redux.
-
-## Deployment
+- **[React](https://reactjs.org/)**: For the UI (also includes react-hot-loader for hot-reloading during development)
+- **[Redux](https://redux.js.org/)**: Global state handling
+- **[Jest](https://jestjs.io/)**: Testing of UI elements and Redux state
+- **[Express](https://expressjs.com)**: Backend responsible for serving routes and bundled frontend
+- **[SuperAgent](https://visionmedia.github.io/superagent/)**: Handling client-side calls
+- **[Webpack](https://webpack.js.org/)**: For bundling client-side scripts
+- **[Babel](https://babeljs.io/)**: For transpiling the client-side to ES5 code 
 
 ## Setup
 
+For production use the following commands need to be executed: 
+
+```
+npm install
+npm run clean  # in case a frontend has been bundled previously
+npm run build
+npm start --production
+```
+
+For local dev usage these commands need to be executed:
+
+```
+npm install
+npm run devstart
+```
+
 ## Useful commands
 
-- `npm start` - Starts a server without server-side livereload
-- `npm run devstart` - Starts a server with server-side livereload using `nodemon`
-- `npm run build:webpack` - Creates public/js/bundle.js
+- `npm start` - Starts the application in production mode (frontend needs to be built first)
+- `npm run devstart` - Starts the application with live reloading using [nodemon](https://nodemon.io/)
+- `npm run build:webpack` - Bundles the frontend
+- `npm run clean` - Removes public/js folder which contains the bundled frontend
 - `npm run build` - Runs clean & build:webpack
 - `npm run build:win` - Runs clean & build:webpack for Windows
-- `npm run clean` - Removes public/js folder
 - `npm test` - Runs the tests
 
 ## Useful links
@@ -33,5 +56,9 @@ The admin interface is built using node.js containing a small API-proxy server a
 - [Thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html)
 - [How redux works, how to use redux](https://egghead.io/lessons/javascript-redux-the-single-immutable-state-tree?series=getting-started-with-redux) **note:** really worth it!
 - [Express.js Guide](http://expressjs.com/en/guide/routing.html)
+- [SuperAgent](http://visionmedia.github.io/superagent/) - A light-weight progressive ajax API
 - [Bluebird - Request-Promise](https://github.com/request/request-promise)
+- [Webpack](https://webpack.js.org/concepts/) - JS bundler
+- [Babel](https://babeljs.io/docs/en/next/) - JS transpiler
+- [Browserlist](https://github.com/browserslist/browserslist) - Share target browsers between different front-end tools
 
