@@ -1,7 +1,7 @@
 {
-  "name": "ranking-comparator",
-  "version": "1.0.0",
-  "description": "Web-view comparing ranking apis for cumulus users",
+  "name": "react-redux-express-template",
+  "version": "0.0.0",
+  "description": "Simple template for serving a react-redux app via express",
   "private": true,
   "scripts": {
     "start": "node index.js",
