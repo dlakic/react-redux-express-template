@@ -41,7 +41,7 @@ function post(user) {
   return new Promise((resolve, reject) => {
     const newUser = user;
     newUser.id = mockUsers.length;
-    mockUsers.push(user);
+    mockUsers.push(newUser);
     // This check is only for illustration purposes
     if (Array.isArray(mockUsers)) {
       resolve(mockUsers);

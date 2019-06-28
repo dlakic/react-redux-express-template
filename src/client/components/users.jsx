@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchUsers } from '../store/action';
+import { fetchUsers, createUser } from '../store/action';
 
 export class Users extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      newUserName: '',
-      newUserProfession: '',
+      name: '',
+      profession: '',
     };
 
     this.props.fetchUsers();
@@ -17,19 +17,19 @@ export class Users extends Component {
 
   changeName(name) {
     this.setState({
-      newUserName: name,
+      name,
     });
   }
 
   changeProfession(profession) {
-    console.log(profession);
     this.setState({
-      newUserProfession: profession,
+      profession,
     });
   }
 
   addUser(e) {
     e.preventDefault();
+    this.props.createUser(this.state);
   }
 
   render() {
@@ -71,8 +71,9 @@ export class Users extends Component {
 
 Users.propTypes = {
   users: PropTypes.array.isRequired,
-  loading: PropTypes.bool.isRequired,
+  userLoading: PropTypes.bool.isRequired,
   fetchUsers: PropTypes.func.isRequired,
+  createUser: PropTypes.func.isRequired,
 };
 
 function mapStateToProps(state) {
@@ -82,5 +83,5 @@ function mapStateToProps(state) {
   };
 }
 
-const mapDispatchToProps = { fetchUsers };
+const mapDispatchToProps = { fetchUsers, createUser };
 export default connect(mapStateToProps, mapDispatchToProps)(Users);

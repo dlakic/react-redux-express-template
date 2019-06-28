@@ -34,4 +34,18 @@ export function fetchUsers() {
   };
 }
 
+
+export function createUser(user) {
+  return async (dispatch) => {
+    try {
+      dispatch(toggleLoading());
+      await request('post', '/api/users').send(user);
+      dispatch(fetchUsers());
+      dispatch(toggleLoading());
+    } catch (e) {
+      // TODO: Proper error handling
+    }
+  };
+}
+
 export default changeColor;
