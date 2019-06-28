@@ -57,7 +57,6 @@ npm run devstart
 - [How redux works, how to use redux](https://egghead.io/lessons/javascript-redux-the-single-immutable-state-tree?series=getting-started-with-redux) **note:** really worth it!
 - [Express.js Guide](http://expressjs.com/en/guide/routing.html)
 - [SuperAgent](http://visionmedia.github.io/superagent/) - A light-weight progressive ajax API
-- [Bluebird - Request-Promise](https://github.com/request/request-promise)
 - [Webpack](https://webpack.js.org/concepts/) - JS bundler
 - [Babel](https://babeljs.io/docs/en/next/) - JS transpiler
 - [Browserlist](https://github.com/browserslist/browserslist) - Share target browsers between different front-end tools
