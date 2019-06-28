@@ -22,16 +22,15 @@ export function setUsers(users) {
 }
 
 export function fetchUsers() {
-  return (dispatch) => {
-    dispatch(toggleLoading());
-    return request('get', '/api/users')
-      .then(response => dispatch(setUsers(response.body)))
-      .catch(() => {
-        // noop
-      })
-      .finally(() => {
-        dispatch(toggleLoading());
-      });
+  return async (dispatch) => {
+    try {
+      dispatch(toggleLoading());
+      const response = await request('get', '/api/users');
+      dispatch(setUsers(response.body));
+      dispatch(toggleLoading());
+    } catch (e) {
+      // TODO: Proper error handling
+    }
   };
 }
 
