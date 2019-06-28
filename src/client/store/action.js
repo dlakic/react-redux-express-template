@@ -23,7 +23,7 @@ export function setUsers(users) {
 
 export function fetchUsers() {
   return (dispatch) => {
-    toggleLoading();
+    dispatch(toggleLoading());
     return request('get', '/api/users')
       .then(response => dispatch(setUsers(response.body)))
       .catch(() => {
